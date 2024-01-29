@@ -13,20 +13,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
   border-bottom: 1.5px solid #f2f2f2;
   z-index: 1000;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
   
 }
 .navbar h1 {
   color: #f1356d;
+  text-align: center;
+  margin-left:100px;
 }
 .navbar .links {
   margin-left: auto;
+  margin-right:200px;
 }
 .navbar button {
   margin-left: 16px;
@@ -37,6 +41,23 @@
 }
 .navbar button:hover {
   color: #f1356d;
+}
+.scroll-indicator {
+  position: fixed;
+  top:0;
+  margin-top: 70px;
+  width: 100%;
+  height: 4px; /* Set the height of the progress line */
+  background-color: #f1356d; /* Choose your desired color */
+  display: none; /* Initially hide the scroll indicator */
+  z-index: 1; /* Set a higher z-index value */
+  
+}
+
+.indicator {
+  height: 8px;
+  width: 0;
+  transition: width 0.3s ease; /* Add a smooth transition effect */
 }
 .section {
   padding: 400px 0;
@@ -90,9 +111,12 @@
   background-size: contain;
   background-position: center;
 }
+.About h1{
+  text-align: center;
+  margin-top: 100px;
+}
 .head{
   text-align: center;
-  /* background-image: url('./girl5.png'); */
   background-size: contain;
   background-position: center;
  
@@ -158,5 +182,59 @@
     margin: 0;
     text-align: center;
   }
+.contact-us-container{
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  text-align: center;
+  }
+.contact-us-container img{
+  max-width: 600px; /* Adjust the width as needed */
+  height: 500px; 
+  margin-right: 100px; 
+}
+.contact-content {
+  max-width: 600px;
+  flex:1; /* Adjust the maximum width as needed */
+}
+.contact-content  p,.contact-content  h1{
+  text-align: center;
+  margin-top: 50px;
+}
+.contact-form {
+  flex: 1; /* Take up remaining space */
+  text-align: left;
+  max-width: 400px; 
+  margin-left: 100px;
+  
+}
+.contact-form p{
 
+  text-align: left;
+  margin-top: 50px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: pink;
+  
+}
 
+.contact-form button {
+  max-width: 400px; 
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #553285;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}

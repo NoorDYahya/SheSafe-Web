@@ -14,7 +14,7 @@ const Navbar = () => {
                 <button onClick={() => handleScrollTo('home')}>Home</button>
                 <button >Game</button>
                 <button onClick={() => handleScrollTo('questions')}>Frequent Questions</button>
-                <button onClick={() => handleScrollTo('about')}>About</button>
+                <button onClick={() => handleScrollTo('AboutId')}>About</button>
             </div>
         </nav>
      );

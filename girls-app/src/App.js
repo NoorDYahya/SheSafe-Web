@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
 import Questions from './Questions';
+import ScrollIndicator from './ScrollIndicator';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Navbar/>
-      
+      <ScrollIndicator /> 
       
       <section id="home" className="section">
         <div className="content">
