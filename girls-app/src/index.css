@@ -5,14 +5,22 @@
   margin: 0;
   font-family: "Quicksand";
   color: #333;
+
 }
 .navbar {
+  position: fixed;
   padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1.5px solid #f2f2f2;
+  z-index: 1000;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
 }
 .navbar h1 {
   color: #f1356d;
@@ -20,17 +28,135 @@
 .navbar .links {
   margin-left: auto;
 }
-.navbar a {
+.navbar button {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  border: none;
+  background-color: transparent;
 }
-.navbar a:hover {
+.navbar button:hover {
   color: #f1356d;
 }
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+.section {
+  padding: 400px 0;
+  background-color: transparent;
 }
+#home {
+  background-image: url('./girl3.png');
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  padding-left: 70px; 
+
+}
+
+#home h2 {
+  font-size: 2em; /* Adjust the font size as needed */
+}
+
+#home p {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  border-bottom-left-radius: 10px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 10px; /* Adjust the radius as needed */
+  /* border-bottom: 2px solid #fff; Add a border for the rounded bottom */
+  padding-bottom: 10px;
+}
+.she-safe {
+  font-size: 3em;
+  color:#f1356d
+  /* Add other styling properties as needed */
+}
+.action-button {
+  background-color: #f1356d; /* Button background color */
+  color: #fff; 
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 1.2em; /* Adjust font size as needed */
+  border: none;
+  border-radius: 50px;
+  margin-right: 20px; /* Adjust border-radius as needed for rounded corners */
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #553285; /* Change background color on hover */
+}
+
+#Questions{
+  background-color: #f0f0f0;
+}
+#About{
+  background-color: #f0f0f0;
+  background-size: contain;
+  background-position: center;
+}
+.head{
+  text-align: center;
+  /* background-image: url('./girl5.png'); */
+  background-size: contain;
+  background-position: center;
+ 
+}
+.head img {
+  width: 600px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  display: block; /* Ensures margin auto works for centering */
+  margin: auto; /* Center the image horizontally */
+}
+.who-we-are-container{
+
+    text-align: center;
+    margin-left : 50px;
+    margin-right: 50px;
+    float: center;
+    bottom: -100px;
+
+}
+.who-we-are-container p{
+    text-align: center;
+    margin-left : 20px;
+    margin-right: 20px;
+    float: center;
+}
+.who-we-are-container h1{
+  color:#f1356d;
+}
+.meet-the-team-container img{
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  display: block; /* Ensures margin auto works for centering */
+  margin: auto;
+  position: center;
+}
+.meet-the-team-container{
+  text-align: center;
+    margin-left : 50px;
+    margin-right: 50px;
+    float: center;
+    bottom: -100px;
+  
+}
+.meet-the-team-container h1{
+ 
+  color:#f1356d;
+}
+.team-member {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  margin-right: 112px;
+}
+
+  .team-member h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .team-member p {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+  }
+
 
