@@ -1,5 +1,5 @@
 import girl from './girl5.png'
-import girl3 from './girl7.png'
+
 const About = () => {
 
 
@@ -35,17 +35,17 @@ const About = () => {
                     🎉✨  <br /><br />
                 </p>
             </div>
-            <div className="meet-the-team container" style={{ maxWidth: '1000px',marginLeft: '210px',marginTop: '50px', padding: '50px', textAlign: 'center', borderRadius: '10px', position: 'center', backgroundColor: 'rgba(247, 5, 114, 0.845)' }}>
+            <div className="meet-the-team container" style={{ maxWidth: '1000px',marginLeft:'150px',marginTop: '50px', padding: '50px', textAlign: 'center', borderRadius: '10px', position: 'center', backgroundColor: 'pink' }}>
                 <h1 style={{ fontSize: '32px', color: 'white', marginBottom: '20px', marginTop: '10px' }}>Meet the Team </h1>
                 <p style={{ fontSize: '18px', lineHeight: '1.5', margin: '0', color: 'black' }}>
                 We are a group of passionate students who want to
                 empower girls, teenagers, and women to navigate the internet safely
                 and confidently. team members:
                 </p>
-                {/* <div style={{ display: 'inline-block', width: '200px', margin: '10px', marginRight: '112px' }}>
+                <div style={{ display: 'inline-block', width: '200px', margin: '10px', marginRight: '112px' }}>
                 <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Yamamah Gbarieh</h3>
                 <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Mentor</p>
-                </div> */}
+                </div>
 
                 <div style={{ display: 'inline-block', width: '200px', margin: '10px', marginRight: '112px' }}>
                 <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Nadya Mani</h3>
@@ -56,17 +56,18 @@ const About = () => {
                 <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Frontend Developer</p>
                 </div>
                 <br/>
-                <div style={{ display: 'inline-block', width: '200px', margin: '10px', marginRight: '112px' }}>
+                <div style={{ display: 'inline-block', width: '200px', margin: '10px', marginRight: '112px' }} id="alaa">
                 <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Alaa Muhessien</h3>
                 <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Backend Developer</p>
                 </div>
-                <div style={{ display: 'inline-block', width: '200px', margin: '10px' }}>
+                <div style={{ display: 'inline-block', width: '200px', margin: '10px' }} id = "samah">
                 <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Samah Rajabi</h3>
                 <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Backend Developer</p>
                 </div>
             </div>
-           <div id="contact"><br/></div>
-           <h1 >Contact Us </h1>
+           
+           {/* <h1 >Contact Us </h1> */}
+           {/* <h1 >Contact Us </h1>
            <div class="contact-us-container">
                
                 
@@ -93,7 +94,7 @@ const About = () => {
                 </div>
                
                 
-            </div>
+            </div> */}
 
                 
            

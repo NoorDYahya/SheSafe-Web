@@ -170,6 +170,7 @@
     bottom: -100px;
   
 }
+
 .meet-the-team-container h1{
  
   color:#f1356d;
@@ -200,6 +201,7 @@
   margin: 50px;
   text-align: center;
   }
+
 .contact-us-container img{
   max-width: 600px; /* Adjust the width as needed */
   height: 500px; 
@@ -219,6 +221,9 @@
   max-width: 400px; 
   margin-left: 100px;
   
+}
+.contact h1{
+  text-align: center;
 }
 .contact-form p{
 

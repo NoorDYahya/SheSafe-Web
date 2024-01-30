@@ -74,8 +74,8 @@ const Questions = () => {
       <style>
         {`
       
-          .accordion h1, p{
-            font-size: 1.5em;
+          .accordion h1{
+            font-size: 2em;
           }
           .questions-container{
             display: flex;

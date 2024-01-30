@@ -4,7 +4,7 @@ import Home from './Home';
 import About from './About';
 import Questions from './Questions';
 import ScrollIndicator from './ScrollIndicator';
-
+import ContactUs from './ContactUs';
 
 
 function App() {
@@ -32,11 +32,13 @@ function App() {
           <About />
         </div>
       </section>
-      {/* <section id="ContactUs" className="section">
+      <section id="ContactUs" className="section">
         <div className="content">
+          <div id="contact"><br/><br/><br/><br/></div>
+          <div className="contact"> <h1>Contact Us </h1></div>
           <ContactUs />
         </div>
-      </section> */}
+      </section>
 
     
 
