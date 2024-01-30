@@ -13,8 +13,9 @@ const Navbar = () => {
             <div className="links">
                 <button onClick={() => handleScrollTo('home')}>Home</button>
                 <button >Game</button>
-                <button onClick={() => handleScrollTo('questions')}>Frequent Questions</button>
+                <button onClick={() => handleScrollTo('questions')}>Tips for safety</button>
                 <button onClick={() => handleScrollTo('AboutId')}>About</button>
+                <button onClick={() => handleScrollTo('contact')}>Contact Us</button>
             </div>
         </nav>
      );

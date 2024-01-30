@@ -5,6 +5,8 @@ import About from './About';
 import Questions from './Questions';
 import ScrollIndicator from './ScrollIndicator';
 
+
+
 function App() {
 
   return (
@@ -30,6 +32,11 @@ function App() {
           <About />
         </div>
       </section>
+      {/* <section id="ContactUs" className="section">
+        <div className="content">
+          <ContactUs />
+        </div>
+      </section> */}
 
     
 

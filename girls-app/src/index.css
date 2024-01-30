@@ -20,7 +20,7 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   
 }
 .navbar h1 {
@@ -82,10 +82,13 @@
   border-bottom-right-radius: 10px; /* Adjust the radius as needed */
   /* border-bottom: 2px solid #fff; Add a border for the rounded bottom */
   padding-bottom: 10px;
+  text-align: left;
 }
 .she-safe {
   font-size: 3em;
-  color:#f1356d
+  color:#f1356d;
+  text-align: left;
+  
   /* Add other styling properties as needed */
 }
 .action-button {
@@ -107,7 +110,7 @@
   background-color: #f0f0f0;
 }
 #About{
-  background-color: #f0f0f0;
+  background-color: pink;
   background-size: contain;
   background-position: center;
 }
@@ -127,6 +130,7 @@
   display: block; /* Ensures margin auto works for centering */
   margin: auto; /* Center the image horizontally */
 }
+
 .who-we-are-container{
 
     text-align: center;
@@ -141,9 +145,13 @@
     margin-left : 20px;
     margin-right: 20px;
     float: center;
+    /* background-color: #f0f0f0; */
+    
+    
 }
 .who-we-are-container h1{
   color:#f1356d;
+  margin-top: 0;
 }
 .meet-the-team-container img{
   width: 100px; /* Adjust the width as needed */
@@ -151,6 +159,8 @@
   display: block; /* Ensures margin auto works for centering */
   margin: auto;
   position: center;
+  margin-top:100px;
+
 }
 .meet-the-team-container{
   text-align: center;
@@ -233,7 +243,7 @@
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #553285;
+  background-color: #f1356d;
   color: white;
   font-size: 18px;
   cursor: pointer;
