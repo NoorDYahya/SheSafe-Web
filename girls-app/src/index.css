@@ -210,6 +210,7 @@
 .contact-content {
   max-width: 600px;
   flex:1; /* Adjust the maximum width as needed */
+  display: flex;
 }
 .contact-content  p,.contact-content  h1{
   text-align: center;
@@ -251,5 +252,36 @@
   background-color: #f1356d;
   color: white;
   font-size: 18px;
+  cursor: pointer;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Higher z-index to appear above other elements */
+}
+
+.modal {
+  background: pink;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+.modal button {
+  background: #007bff; /* Button color, customize as needed */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
