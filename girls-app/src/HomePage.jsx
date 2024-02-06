@@ -7,7 +7,7 @@ import ScrollIndicator from './ScrollIndicator';
 import ContactUs from './ContactUs';
 
 
-function App() {
+function HomePage() {
 
   return (
     <div className="App">
@@ -51,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
