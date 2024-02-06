@@ -1,24 +1,27 @@
-import React, { useState ,useEffect } from 'react'
 
 
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
+import './LoginPage.css'; // Import the CSS file for styling
 
-function LoginPage() {
+function LoginPage({ closeLoginPopup }) {
   const [userEmail, setUserEmail] = useState("");
-  const [userPassword , setUserPassword] = useState("");
-  const [isTeacher , setIsTeacher] = useState(false);
+  const [userPassword, setUserPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [isSignupMode, setIsSignupMode] = useState(false); // State to track signup mode
+  const navigate = useNavigate();
 
- 
   const handleEmailChange = (e) => {
-     e.preventDefault();
-     setUserEmail(e.target.value);
+    setUserEmail(e.target.value);
   }
+
   const handlePasswordChange = (e) => {
-    e.preventDefault();
     setUserPassword(e.target.value);
   }
+
   const handleLogin = (e) => {
     e.preventDefault();
-  
+
     const userData = {
       email: userEmail,
       password: userPassword
@@ -34,80 +37,112 @@ function LoginPage() {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-     
-    
-    
-    setUserEmail("");
+        navigate('/');
+        localStorage.setItem("username" , data.username );
+        const gameUrl = `http://localhost:3001/?username=${data.username }`;
+    window.open(gameUrl, '_blank');
+        setUserEmail("");
         setUserPassword("");
-
-
+        closeLoginPopup(); 
       })
       .catch(error => {
         console.error('Error during login:', error);
       });
   };
 
-  const handleClickSignUP = ()=>{
-    // navigate(/signUp);
+  const handleSignup = (e) => {
+    e.preventDefault();
+
+    const userData = {
+      username: username, // Corrected syntax: use comma instead of semicolon
+      email: userEmail,
+      password: userPassword
+    };
+
+    fetch('https://shesafebackend.onrender.com/api/user/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        navigate('/');
+        localStorage.setItem("username" , data.username );
+        const gameUrl = `http://localhost:3001/?username=${data.username }`;
+    window.open(gameUrl, '_blank');
+        setUserEmail("");
+        setUserPassword("");
+        closeLoginPopup(); // Close the popup after successful login
+      })
+      .catch(error => {
+        console.error('Error during login:', error);
+      });
+  };
+
+  const handleClickSignupLink = (e) => {
+    e.preventDefault(); // Prevent default behavior of link
+    setIsSignupMode(true); // Set signup mode to true when signup link is clicked
   }
-  
+
   return (
-   <>
-       <div className="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style={{  }}>
-      <div className='rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8'>
-        <div className="text-white">
-          <div className="mb-8 flex flex-col items-center">
-         
-         
-          </div>
-          <form>
-            <div className="mb-4 text-lg">
-              <input
-                type="email"
-                placeholder='example@gmail.com'
-                className="rounded-3xl border-none bg-[#fff] bg-opacity-90 px-6 py-2  text-inherit placeholder-[#e066c5] shadow-lg outline-none backdrop-blur-md text-[#233f92]"
-                value={userEmail}
-                onChange={handleEmailChange}
-              />
-            </div>
-
-            <div className="mb-4 text-lg">
-              <input
-                type="password"
-                placeholder="***"
-                className="rounded-3xl border-none bg-[#fff] bg-opacity-90 px-6 py-2  text-inherit placeholder-[#e066c5] shadow-lg outline-none backdrop-blur-md text-[#233f92]"
-                value={userPassword}
-                onChange={handlePasswordChange}
-              />
-            </div>
-
-            <div className="mb-6">
-            <span className="ml-2 text-sm text-[#fff]" onClick={handleClickSignUP}>You still not have an account?</span>
-              {/* <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  className="form-checkbox text-blue-500"
-                  checked={isTeacher}
-                  onChange={() => setIsTeacher((isTeacher) => !isTeacher)}
-                />
-                <span className="ml-2 text-sm text-[#fff]">Is Teacher</span>
-              </label> */}
-            </div>
-            <div className="mt-8 flex justify-center text-lg text-black">
-              <button
-                type="button"
-                className="rounded-3xl bg-[#5aafca] bg-opacity-90 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-[#87e1fc]"
-                onClick={handleLogin}
-              >
-                Login
-              </button>
-            </div>
-          </form>
+    <div className="login-popup">
+      <div className="login-form">
+        <div className='closeDiv'>
+          <button className="close-button" onClick={closeLoginPopup}>X</button> {/* Close button */}
         </div>
+        <form>
+            {isSignupMode && (
+              <div className="mb-4 text-lg">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+            )}
+          <div className="mb-4 text-lg">
+            <input
+              type="email"
+              placeholder='example@gmail.com'
+              value={userEmail}
+              onChange={handleEmailChange}
+            />
+          </div>
+
+          <div className="mb-4 text-lg">
+            <input
+              type="password"
+              placeholder="*"
+              value={userPassword}
+              onChange={handlePasswordChange}
+            />
+          </div>
+
+
+          <div className="mb-6">
+            {isSignupMode ? (
+              <span className="ml-2 text-sm">Already have an account? <button className="signup-link" onClick={() => setIsSignupMode(false)}>Login</button></span>
+            ) : (
+              <span className="ml-2 text-sm">You still not have an account? <button className="signup-link" onClick={handleClickSignupLink}>Signup</button></span>
+            )}
+          </div>
+          <div className="mt-8">
+            <button
+              type="button"
+              className='loginButton'
+              onClick={isSignupMode ? handleSignup : handleLogin} // Use appropriate function based on mode
+            >
+              {isSignupMode ? "Signup" : "Login"} {/* Change button text based on mode */}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-   </>
   )
 }
 
-export default LoginPage
+export default LoginPage;

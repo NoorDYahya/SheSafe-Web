@@ -10,7 +10,7 @@ const About = () => {
                 <h2>About us</h2>
                 <img src={girl}alt="Circle " />
             </div>
-            <div class="who-we-are-container">
+            <div className="who-we-are-container" style={{ maxWidth: '1000px',marginLeft:'150px',marginTop: '50px', padding: '50px', textAlign: 'center', borderRadius: '10px', position: 'center', backgroundColor: 'pink' }}>
                 <h1>What is SheSafe? 🌟</h1>
                 <p>
                     Embark on a magical journey with us into the heart of web safety, where
@@ -63,6 +63,10 @@ const About = () => {
                 <div style={{ display: 'inline-block', width: '200px', margin: '10px' }} id = "samah">
                 <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Samah Rajabi</h3>
                 <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Backend Developer</p>
+                </div>
+                <div style={{ display: 'inline-block', width: '200px', margin: '10px' }} id = "helena">
+                <h3 style={{ fontSize: '20px', margin: '10px 0', textAlign: 'center' }}>Helena Khalilieh</h3>
+                <p style={{ fontSize: '16px', margin: '0', textAlign: 'center' }}>Frontend Developer</p>
                 </div>
             </div>
            

@@ -6,13 +6,6 @@ import HomePage from './HomePage'
 
 function App() {
   
-  // #100F15
-  // #D33B96
-  // #2C4290
-
-
-  // #FF4CB7
-  // #4E75FF
   return (
     <>
     <div className='bg-[#100F15] min-h-screen '>
@@ -20,7 +13,8 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          {/* <Route path='/signUp' element={<RegistrationPage />} /> */}
+    
+
            {/* <Route element={<PointProviderLayout />}>
             <Route path='/dashboard' element={<DashboardPage />} />
             <Route path='/dashboard/:language_Topics' element={<LanguageTopicsPage />} />

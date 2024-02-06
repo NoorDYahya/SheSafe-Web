@@ -133,11 +133,11 @@
 
 .who-we-are-container{
 
-    text-align: center;
-    margin-left : 50px;
-    margin-right: 50px;
-    float: center;
-    bottom: -100px;
+  text-align: center;
+  margin-left : 50px;
+  margin-right: 50px;
+  float: center;
+  bottom: -100px;
 
 }
 .who-we-are-container p{
@@ -255,7 +255,6 @@
   cursor: pointer;
 }
 
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -284,4 +283,17 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+#LogIn{
+  background-color: #f1356d; /* Button background color */
+  color: #fff; 
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 1em; /* Adjust font size as needed */
+  border: none;
+  border-radius: 50px;
+  margin-right: 20px; /* Adjust border-radius as needed for rounded corners */
+  cursor: pointer;
+}
+#LogIn:hover{
+  background-color:#553285;
 }
